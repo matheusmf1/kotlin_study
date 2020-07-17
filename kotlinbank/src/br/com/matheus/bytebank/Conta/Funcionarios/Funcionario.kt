@@ -1,4 +1,4 @@
-package Funcionarios
+package br.com.matheus.bytebank.Conta.Funcionarios
 
 abstract class Funcionario (
   val nome: String,

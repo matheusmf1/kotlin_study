@@ -1,7 +1,7 @@
-package testes
+package br.com.matheus.bytebank.Conta.testes
 
-import Conta.ContaCorrente
-import Conta.ContaPoupanca
+import br.com.matheus.bytebank.Conta.ContaCorrente
+import br.com.matheus.bytebank.Conta.ContaPoupanca
 
 fun testaComportamentosConta() {
   val conta1 = ContaCorrente( "Matheus", 1000 )

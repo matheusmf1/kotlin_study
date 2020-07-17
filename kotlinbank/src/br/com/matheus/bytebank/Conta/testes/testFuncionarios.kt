@@ -1,9 +1,9 @@
-package testes
+package br.com.matheus.bytebank.Conta.testes
 
-import Funcionarios.Analista
-import Funcionarios.CalculadoraBonificacao
-import Funcionarios.Diretor
-import Funcionarios.Gerente
+import br.com.matheus.bytebank.Conta.Funcionarios.Analista
+import br.com.matheus.bytebank.Conta.Funcionarios.CalculadoraBonificacao
+import br.com.matheus.bytebank.Conta.Funcionarios.Diretor
+import br.com.matheus.bytebank.Conta.Funcionarios.Gerente
 
 fun testaFuncionarios() {
   val matheus1 = Analista (

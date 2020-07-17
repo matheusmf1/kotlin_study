@@ -1,4 +1,4 @@
-package Conta
+package br.com.matheus.bytebank.Conta
 
 class ContaPoupanca ( titular: String, numero: Int) : Conta( titular = titular, numero = numero) {
 

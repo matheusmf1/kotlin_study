@@ -1,4 +1,6 @@
-import Funcionarios.Autenticavel
+package br.com.matheus.bytebank.Conta
+
+import br.com.matheus.bytebank.Conta.Funcionarios.Autenticavel
 
 class SistemaInterno {
 

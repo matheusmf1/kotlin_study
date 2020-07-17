@@ -1,9 +1,9 @@
-package testes
+package br.com.matheus.bytebank.Conta.testes
 
-import Cliente
-import Funcionarios.Diretor
-import Funcionarios.Gerente
-import SistemaInterno
+import br.com.matheus.bytebank.Conta.Cliente
+import br.com.matheus.bytebank.Conta.Funcionarios.Diretor
+import br.com.matheus.bytebank.Conta.Funcionarios.Gerente
+import br.com.matheus.bytebank.Conta.SistemaInterno
 
 fun testaAutenticacao() {
   val gerente = Gerente(

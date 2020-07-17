@@ -1,4 +1,4 @@
-package Conta
+package br.com.matheus.bytebank.Conta
 
 abstract class Conta(val titular: String, val numero: Int ) {
   var saldo = 0.00
