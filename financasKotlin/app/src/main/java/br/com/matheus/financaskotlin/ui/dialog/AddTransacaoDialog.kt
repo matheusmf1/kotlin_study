@@ -9,14 +9,13 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import br.com.matheus.financaskotlin.R
+import br.com.matheus.financaskotlin.delegate.TransacaoDelegate
 import br.com.matheus.financaskotlin.extension.convertToCalendar
 import br.com.matheus.financaskotlin.extension.formatDateToBrasil
 import br.com.matheus.financaskotlin.model.Tipo
 import br.com.matheus.financaskotlin.model.Transacao
-import kotlinx.android.synthetic.main.activity_lista_transacoes.*
 import kotlinx.android.synthetic.main.form_transacao.view.*
 import java.math.BigDecimal
-import java.text.SimpleDateFormat
 import java.util.*
 
 class AddTransacaoDialog(
@@ -26,15 +25,13 @@ class AddTransacaoDialog(
 
   private val addView = createLayout()
 
-  private fun configDialog() {
-
+  fun configDialog( transacaoDelegate: TransacaoDelegate) {
     configDateField()
     configCategoryField()
-
-    configDialog()
+    configForm( transacaoDelegate )
   }
 
-  private fun configDialog() {
+  private fun configForm( transacaoDelegate: TransacaoDelegate ) {
 
     AlertDialog.Builder(context)
       .setTitle(R.string.adiciona_receita)
@@ -53,8 +50,7 @@ class AddTransacaoDialog(
           categoria = textCategory
         )
 
-        updateTransactions(createdTransacao)
-        lista_transacoes_adiciona_menu.close(true)
+        transacaoDelegate.delegate( createdTransacao )
 
       }
       .setNegativeButton("Cancelar", null)
