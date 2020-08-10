@@ -30,7 +30,8 @@ class BooksViewModel : ViewModel() {
             bookBodyResponse.bookResult.forEach { results ->
               val book = Book(
                 title = results.bookDetailsResponse[0].title,
-                author = results.bookDetailsResponse[0].author
+                author = results.bookDetailsResponse[0].author,
+                description = results.bookDetailsResponse[0].description
               )
 
               books.add(book)
@@ -41,7 +42,7 @@ class BooksViewModel : ViewModel() {
       }
 
       override fun onFailure(call: Call<BookBodyResponse>, t: Throwable) {
-        Log.d("[Book]", "Erro: " + t )
+        Log.d("[Book]", "Erro: " + t)
       }
 
     })
